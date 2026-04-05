@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Attendance System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- 🔷 HEADER -->
+    <div class="header">
+        <h1><i class="fa-solid fa-user-check"></i> Attendance System</h1>
+        <p>Client–Server Based Smart Tracking</p>
+    </div>
+
+    <!-- 🔐 LOGIN SECTION -->
+    <div id="loginSection" class="card">
+        <h2><i class="fa-solid fa-lock"></i> Login</h2>
+
+        <div class="input-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="username" placeholder="Enter Username">
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="password" placeholder="Enter Password">
+        </div>
+
+        <button class="btn" onclick="login()">
+            <i class="fa-solid fa-right-to-bracket"></i> Login
+        </button>
+    </div>
+
+    <!-- 📊 APP SECTION -->
+    <div id="appSection" class="card" style="display:none;">
+
+        <h2 id="welcome"></h2>
+
+        <!-- ACTION BUTTONS -->
+        <div class="actions">
+            <button id="markBtn" class="btn success" onclick="markAttendance()">
+                <i class="fa-solid fa-check"></i> Mark Attendance
+            </button>
+
+            <button class="btn danger" onclick="logout()">
+                <i class="fa-solid fa-right-from-bracket"></i> Logout
+            </button>
+        </div>
+
+        <!-- RECORDS -->
+        <div class="records">
+            <h3><i class="fa-solid fa-list"></i> Attendance Records</h3>
+            <button class="btn small" onclick="getRecords()">
+                <i class="fa-solid fa-rotate"></i> Refresh
+            </button>
+
+            <ul id="records"></ul>
+        </div>
+
+    </div>
+
+    <!-- 🔻 FOOTER -->
+    <div class="footer">
+        <p>© 2026 Smart Attendance System | Computer Networks Project</p>
+    </div>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
